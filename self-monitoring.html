@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self-Monitoring Tracker - Strong Steps</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo">🌿 Strong Steps</a>
+      <button class="hamburger">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recovery-phases.html">Recovery Phases</a></li>
+        <li><a href="self-monitoring.html" style="color: var(--primary);">Tracker</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">Self-Monitoring Tracker</h1>
+    <p class="text-body" style="font-size: 1.1rem;">
+      Use this tool to check in with your ankle today. Adjust the sliders below based on how you feel right now.
+    </p>
+
+    <div class="tracker">
+      <div class="tracker-group">
+        <label for="pain-level">Pain Level: <span id="pain-val" style="color: var(--primary);">2</span> / 10</label>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">0 = No pain, 10 = Worst imaginable pain</p>
+        <input type="range" id="pain-level" min="0" max="10" value="2">
+      </div>
+
+      <div class="tracker-group">
+        <label for="swelling-level">Swelling: <span id="swelling-val" style="color: var(--primary);">Mild</span></label>
+        <input type="range" id="swelling-level" min="1" max="5" value="2">
+      </div>
+
+      <div class="tracker-group">
+        <label for="confidence-level">Confidence moving/walking today: <span id="confidence-val" style="color: var(--primary);">3</span> / 5</label>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">1 = Very fearful, 5 = Very confident and ready</p>
+        <input type="range" id="confidence-level" min="1" max="5" value="3">
+      </div>
+
+      <div class="tracker-output" id="tracker-feedback">
+        <!-- JS will populate feedback -->
+      </div>
+    </div>
+
+    <div style="margin-top: 3rem;">
+      <h2 style="color: var(--text-main); font-size: 1.5rem;">Normal Discomfort vs. Warning Signs</h2>
+      <div class="grid" style="margin-top: 1rem;">
+        <div class="card" style="background-color: rgba(163, 193, 173, 0.1); border-color: var(--secondary);">
+          <h3 style="color: var(--primary);">Normal Healing Discomfort ✔️</h3>
+          <ul style="margin-left: 1.5rem; font-size: 1rem;" class="text-body">
+            <li>Mild aching after exercises</li>
+            <li>Stiffness in the morning that improves as you move</li>
+            <li>Pain rating around 2-4 out of 10 during rehab</li>
+            <li>Symptoms that settle down within 24 hours after activity</li>
+          </ul>
+        </div>
+        
+        <div class="card" style="background-color: rgba(242, 139, 130, 0.1); border-color: var(--accent);">
+          <h3 style="color: #d1564d;">Warning Signs ❌</h3>
+          <ul style="margin-left: 1.5rem; font-size: 1rem;" class="text-body">
+            <li>Sharp, stabbing pain that forces you to limp heavily</li>
+            <li>Sudden increase in swelling after weeks of it going down</li>
+            <li>Pain that keeps you awake at night</li>
+            <li>Feeling of the ankle giving way completely</li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-body" style="margin-top: 1.5rem;"><em>If you experience warning signs, stop exercises, rest, and consider seeking professional medical advice.</em></p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Strong Steps - A supportive guide for women navigating ankle recovery.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
